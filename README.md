@@ -28,11 +28,11 @@ You will work with stateful and stateless functional React components using hook
 - Check for duplicates whenever the name in the form changes and indicate the name is a duplicate
 - Only add a new contact on form submission if it does not duplicate an existing contact’s name
 - A successful submission should clear the form
-- In the Add Contact section, render a <code>ContactForm</code> with the following passed via <code>props</code>:
+- In the **Add Contact** section, render a <code>ContactForm</code> with the following passed via <code>props</code>:
     - local state variables
     - local state variable setter functions
     - <code>handleSubmit</code> callback function
-- In the Contacts section, render a <code>TileList</code> with the contact array passed via <code>props</code>
+- In the **Contacts** section, render a <code>TileList</code> with the contact array passed via <code>props</code>
 
 #### <code>ContactForm</code>
 
@@ -59,3 +59,18 @@ The requirements for the <code>TileList</code> component are generalized and all
 - Iterate over the values in the <code>description</code> object, passed in via props, and render a ```<p>``` element for each value and give each a <code>className</code> of <code>"tile"</code>.
 
 Just like the <code>TileList</code> component, the <code>Tile</code> component is generalized to work with data from any object. This allows it to be used in both the <code>ContactsPage</code> and <code>AppointmentsPage</code> components.
+
+#### <code>AppointmentsPage</code>
+
+- Receive three props:
+    - The current list of appointments
+    - The current list of contacts
+    - A callback function for adding a new appointment
+- Keep track of four local state variables, the current name, contact, date, and time entered into the form
+- Add a new appointment on form submission
+- Clear the form on submission
+- In the ****Add Appointment** section, render an <code>AppointmentForm</code> with the following passed via <code>props</code>:
+    - local state variables
+    - local state variable setter functions
+    - <code>handleSubmit</code> callback function
+- In the **Appointments** section, render a <code>TileList</code> with the appointment array passed via <code>props</code>
