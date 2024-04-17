@@ -11,7 +11,7 @@ You will work with stateful and stateless functional React components using hook
 
 ### Requirements 
 
-### <code>App</code>
+#### <code>App</code>
 
 - Keep track of the contacts and appointments data, each being an array of objects
 - Define a callback function that, given a name, phone number, and email, adds a new contact object with that data to the array of contacts
@@ -19,7 +19,7 @@ You will work with stateful and stateless functional React components using hook
 - Pass the array of contacts and the appropriate callback function as props to the <code>ContactsPage</code> component
 - Pass the appointments array, contacts array, and the add appointment function as props to the <code>AppointmentsPage</code> component
 
-### <code>ContactsPage</code>
+#### <code>ContactsPage</code>
 
 - Receive two props:
     - The current list of contacts
@@ -34,7 +34,7 @@ You will work with stateful and stateless functional React components using hook
     - <code>handleSubmit</code> callback function
 - In the Contacts section, render a <code>TileList</code> with the contact array passed via <code>props</code>
 
-### <code>ContactForm</code>
+#### <code>ContactForm</code>
 
 - Render a <code>form</code> with:
     - The <code>onSubmit</code> attribute set
