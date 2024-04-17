@@ -9,22 +9,12 @@ export const ContactsPage = ({ contacts, addContact }) => {
   const [email, setEmail] = useState("");
   const [duplicate, setDuplicate] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!duplicate) {
-      addContact(name, phone, email);
-      setName("");
-      setPhone("");
-      setEmail("");
-    }
-  };
-
   useEffect(() => {
     const nameIsDuplicate = () => {
       const found = contacts.find((contact) => contact.name === name);
       if (found !== undefined) {
         return true;
-      } 
+      }
       return false;
     };
 
@@ -35,6 +25,15 @@ export const ContactsPage = ({ contacts, addContact }) => {
     }
   }, [name, contacts, duplicate]);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!duplicate) {
+      addContact(name, phone, email);
+      setName("");
+      setPhone("");
+      setEmail("");
+    }
+  };
 
   return (
     <>

@@ -16,46 +16,40 @@ export const ContactForm = ({
           type="text"
           name="name"
           value={name}
-          required
           onChange={(e) => setName(e.target.value)}
+          required
           placeholder="Contact Name"
           aria-label="Contact Name"
         />
       </label>
-      <br/>
+      <br />
       <label>
-        <input 
+        <input
           type="tel"
           name="phone"
           value={phone}
-          required
           onChange={(e) => setPhone(e.target.value)}
+          required
+          // regex is for US phone numbers
           pattern="^0[1-6]{1}(([0-9]{2}){4})|((\s[0-9]{2}){4})|((-[0-9]{2}){4})$"
-          placeholder="Phone (##########)"
-          aria-label="Phone"
+          placeholder="Contact Phone (###-###-####)"
+          aria-label="Contact Phone"
         />
       </label>
-      <br/>
+      <br />
       <label>
-        <input 
+        <input
           type="email"
           name="email"
           value={email}
-          required
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
-          aria-label="Email"
+          required
+          placeholder="Contact Email"
+          aria-label="Contact Email"
         />
       </label>
-      <br/>
-      <label>
-        <input 
-          type="submit"
-          value="Add Contact"
-          aria-label="Add Contact" 
-        />
-      </label>
+      <br />
+      <input type="submit" value="Add Contact" aria-label="Add Contact"/>
     </form>
   );
 };
-
