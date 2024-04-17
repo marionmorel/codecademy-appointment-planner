@@ -49,3 +49,13 @@ You will work with stateful and stateless functional React components using hook
 - Use the array passed via <code>props</code> to iteratively render <code>Tile</code> components, using each object in the array to pass the <code>name</code> and <code>description</code> props to each rendered <code>Tile</code> component
 
 The requirements for the <code>TileList</code> component are generalized and allow it to be shared by the <code>ContactsPage</code> and <code>AppointmentsPage</code> components. As long as an array of objects with either the contact data or appointments data is passed then the content will be handled appropriately.
+
+#### <code>Tile</code>
+
+- Receive two props:
+    - name
+    - description
+- Render a ```<p>``` element with the <code>name</code> prop. Give this element a <code>className</code> of <code>"tile-title"</code>
+- Iterate over the values in the <code>description</code> object, passed in via props, and render a ```<p>``` element for each value and give each a <code>className</code> of <code>"tile"</code>.
+
+Just like the <code>TileList</code> component, the <code>Tile</code> component is generalized to work with data from any object. This allows it to be used in both the <code>ContactsPage</code> and <code>AppointmentsPage</code> components.
