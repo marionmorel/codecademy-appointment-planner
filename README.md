@@ -17,7 +17,7 @@ You will work with stateful and stateless functional React components using hook
 - Define a callback function that, given a name, phone number, and email, adds a new contact object with that data to the array of contacts
 - Define a callback function that, given a name, contact, date, and time, adds a new appointment object with that data to the array of appointments
 - Pass the array of contacts and the appropriate callback function as props to the <code>ContactsPage</code> component
-- Pass the appointments array, contacts array, and the add appointment function as props to the <code>AppointmentsPage</code> component
+- Pass the appointments array, contacts array, and the add appointment function as props to the <code>AppointmentsPage</code> component.
 
 #### <code>ContactsPage</code>
 
@@ -32,7 +32,7 @@ You will work with stateful and stateless functional React components using hook
     - local state variables
     - local state variable setter functions
     - <code>handleSubmit</code> callback function
-- In the **Contacts** section, render a <code>TileList</code> with the contact array passed via <code>props</code>
+- In the **Contacts** section, render a <code>TileList</code> with the contact array passed via <code>props</code>.
 
 #### <code>ContactForm</code>
 
@@ -40,7 +40,7 @@ You will work with stateful and stateless functional React components using hook
     - The <code>onSubmit</code> attribute set
     - 3 controlled ```<input>``` elements, one for each piece of contact data
     - A submit button
-- Include a <code>pattern</code> attribute to the phone ```<input>``` with a regex that matches the phone locale of your preference
+- Include a <code>pattern</code> attribute to the phone ```<input>``` with a regex that matches the phone locale of your preference.
 
 #### <code>TileList</code>
 
@@ -82,4 +82,15 @@ Just like the <code>TileList</code> component, the <code>Tile</code> component i
     - 3 controlled <code>input</code> components, to be used for the name, date and time appointment data
     - A <code>ContactPicker</code> component with the contacts list passed in via props
     - A submit button
-- Use <code>getTodayString()</code> to set the <code>min</code> attribute of the date <code>input</code>
+- Use <code>getTodayString()</code> to set the <code>min</code> attribute of the date <code>input</code>.
+
+#### <code>ContactPicker</code>
+
+- Receive 4 props:
+    - The array of contacts
+    - A callback function to handle when the <code>onChange</code> event is triggered
+    - value
+    - name
+- Render a <code>select</code> element with the <code>onChange</code> attribute set to the callback passed in via props, a <code>value</code> attribute set to the <code>value</code> prop, and a <code>name</code> attribute set to the <code>name</code> prop.
+- Add a default <code>option</code> element with the text “No Contact Selected” and a <code>value</code> attribute of <code>""</code>.
+- Iteratively add <code>option</code> elements using the contact names from the array passed in via props.

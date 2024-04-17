@@ -11,7 +11,7 @@ const getTodayString = () => {
 export const AppointmentForm = ({
   contacts,
   name,
-  setTitle,
+  setName,
   contact,
   setContact,
   date,
@@ -33,7 +33,7 @@ export const AppointmentForm = ({
           name="name"
           value={name}
           required
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={(e) => setName(e.target.value)}
           placeholder="Appointment Name"
           aria-label="Appointment Name"
         />

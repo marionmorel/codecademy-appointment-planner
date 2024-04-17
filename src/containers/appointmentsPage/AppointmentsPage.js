@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { AppointmentForm } from "../../components/appointmentForm/AppointmentForm";
 import { TileList } from "../../components/tileList/TileList";
 
-export const AppointmentsPage = ({ appointments, addAppointment, contacts}) => {
+export const AppointmentsPage = ({ appointments, addAppointment, contacts }) => {
   /* Define state variables for appointment info */
   const [name, setName] = useState('');
   const [contact, setContact] = useState('');
@@ -18,16 +18,16 @@ export const AppointmentsPage = ({ appointments, addAppointment, contacts}) => {
     setContact('');
     setDate('');
     setTime('');
-   
   };
 
   return (
-    <div>
+    <>
       <section>
         <h2>Add Appointment</h2>
         <AppointmentForm 
+          contacts={contacts}
           name={name}
-          setName={setName}
+          setTitle={setName}
           contact={contact}
           setContact={setContact}
           date={date}
@@ -42,6 +42,6 @@ export const AppointmentsPage = ({ appointments, addAppointment, contacts}) => {
         <h2>Appointments</h2>
         <TileList tiles={appointments} />
       </section>
-    </div>
+    </>
   );
 };

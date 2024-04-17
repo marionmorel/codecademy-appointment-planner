@@ -3,8 +3,8 @@ import React from "react";
 export const ContactForm = ({
   name,
   setName,
-  phoneNumber,
-  setPhoneNumber,
+  phone,
+  setPhone,
   email,
   setEmail,
   handleSubmit
@@ -27,12 +27,12 @@ export const ContactForm = ({
         <input 
           type="tel"
           name="phone"
-          value={phoneNumber}
+          value={phone}
           required
-          onChange={(e) => setPhoneNumber(e.target.value)}
+          onChange={(e) => setPhone(e.target.value)}
           pattern="^0[1-6]{1}(([0-9]{2}){4})|((\s[0-9]{2}){4})|((-[0-9]{2}){4})$"
-          placeholder="Phone Number"
-          aria-label="Phone Number"
+          placeholder="Phone (##########)"
+          aria-label="Phone"
         />
       </label>
       <br/>
