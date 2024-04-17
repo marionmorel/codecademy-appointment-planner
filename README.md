@@ -33,3 +33,11 @@ You will work with stateful and stateless functional React components using hook
     - local state variable setter functions
     - <code>handleSubmit</code> callback function
 - In the Contacts section, render a <code>TileList</code> with the contact array passed via <code>props</code>
+
+### <code>ContactForm</code>
+
+- Render a <code>form</code> with:
+    - The <code>onSubmit</code> attribute set
+    - 3 controlled ```<input>``` elements, one for each piece of contact data
+    - A submit button
+- Include a <code>pattern</code> attribute to the phone ```<input>``` with a regex that matches the phone locale of your preference
