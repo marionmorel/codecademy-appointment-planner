@@ -32,7 +32,7 @@ export const ContactForm = ({
           required
           // regex is for US phone numbers
           pattern="^0[1-6]{1}(([0-9]{2}){4})|((\s[0-9]{2}){4})|((-[0-9]{2}){4})$"
-          placeholder="Contact Phone (###-###-####)"
+          placeholder="Contact Phone (06########)"
           aria-label="Contact Phone"
         />
       </label>
