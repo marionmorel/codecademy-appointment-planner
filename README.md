@@ -73,4 +73,13 @@ Just like the <code>TileList</code> component, the <code>Tile</code> component i
     - local state variables
     - local state variable setter functions
     - <code>handleSubmit</code> callback function
-- In the **Appointments** section, render a <code>TileList</code> with the appointment array passed via <code>props</code>
+- In the **Appointments** section, render a <code>TileList</code> with the appointment array passed via <code>props</code>.
+
+#### <code>AppointmentForm</code>
+
+- Render a <code>form</code> with:
+    - The <code>onSubmit</code> attribute set to the callback function passed in via <code>props</code>
+    - 3 controlled <code>input</code> components, to be used for the name, date and time appointment data
+    - A <code>ContactPicker</code> component with the contacts list passed in via props
+    - A submit button
+- Use <code>getTodayString()</code> to set the <code>min</code> attribute of the date <code>input</code>

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useMemo } from "react";
+import { ContactPicker } from '../contactPicker/ContactPicker'
 
 const getTodayString = () => {
   const [month, day, year] = new Date()
@@ -9,7 +10,7 @@ const getTodayString = () => {
 
 export const AppointmentForm = ({
   contacts,
-  title,
+  name,
   setTitle,
   contact,
   setContact,
@@ -20,7 +21,61 @@ export const AppointmentForm = ({
   handleSubmit
 }) => {
 
+  const contactNames = useMemo(() => {
+    return contacts.map((contact) => contact.name);
+  }, [contacts]);
+
   return (
-    <></>
+    <form onSubmit={handleSubmit}>
+      <label>
+        <input 
+          type="text"
+          name="name"
+          value={name}
+          required
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder="Appointment Name"
+          aria-label="Appointment Name"
+        />
+      </label>
+      <br/>
+      <label>
+        <ContactPicker
+        name="contact"
+        value={contact}
+        contacts={contactNames}
+        onChange={(e) => setContact(e.target.value)}        
+        />
+      </label>
+      <br/>
+      <label>
+        <input 
+          type="date"
+          name="date"
+          value={date}
+          required
+          min={getTodayString()}
+          onChange={(e) => setDate(e.target.value)}
+          aria-label="Date"
+        />
+      </label>
+      <br/>
+      <label>
+        <input 
+          type="time"
+          name="time"
+          value={time}
+          required
+          onChange={(e) => setTime(e.target.value)}
+          aria-label="Time Picker"
+        />
+      </label>
+      <br/>
+      <input 
+        type="submit" 
+        value="Add Appointment" 
+        aria-label="Add Appointment" 
+      />
+    </form>
   );
 };
