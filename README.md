@@ -69,7 +69,7 @@ Just like the <code>TileList</code> component, the <code>Tile</code> component i
 - Keep track of four local state variables, the current name, contact, date, and time entered into the form
 - Add a new appointment on form submission
 - Clear the form on submission
-- In the ****Add Appointment** section, render an <code>AppointmentForm</code> with the following passed via <code>props</code>:
+- In the **Add Appointment** section, render an <code>AppointmentForm</code> with the following passed via <code>props</code>:
     - local state variables
     - local state variable setter functions
     - <code>handleSubmit</code> callback function
