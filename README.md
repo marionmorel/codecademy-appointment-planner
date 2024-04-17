@@ -41,3 +41,11 @@ You will work with stateful and stateless functional React components using hook
     - 3 controlled ```<input>``` elements, one for each piece of contact data
     - A submit button
 - Include a <code>pattern</code> attribute to the phone ```<input>``` with a regex that matches the phone locale of your preference
+
+#### <code>TileList</code>
+
+- Receive one prop:
+    - An array of objects to render as a list
+- Use the array passed via <code>props</code> to iteratively render <code>Tile</code> components, using each object in the array to pass the <code>name</code> and <code>description</code> props to each rendered <code>Tile</code> component
+
+The requirements for the <code>TileList</code> component are generalized and allow it to be shared by the <code>ContactsPage</code> and <code>AppointmentsPage</code> components. As long as an array of objects with either the contact data or appointments data is passed then the content will be handled appropriately.
